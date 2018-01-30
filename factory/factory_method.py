@@ -3,15 +3,15 @@
     팩토리 메소드
     ~~~~~~~~~
 
-    팩토리만 정해주면
-    그 후 필요한 인스턴스들은 팩토리가 만들어준다.
-    클라이언트가 매번 조건식을 활용해서 인스턴스 생성을 분기할 필요가 없다.
+    객체를 생성하기 위한 인터페이스를 정의하는데, 어떤 클래스의 인스턴스를
+    만들지는 서브클래스에서 결정하게 만든다. 즉 팩토리 메소드 패턴을 이용하면
+    클래스의 인스턴스를 만드는 일을 서브클래스에게 맡기는 것.
     클래스가 독립적으로 관리되기 때문에
     특정 클래스의 변경 사항이 생겼을 때 다른 클래스에 대한 영향을 주지 않는다.
 
     팩토리 메소드의 장점
     1.  코드를 일반적으로 만들어 실제 클래스에 묶이지 않고 인터페이스의 의존도를 낮춘다.
-        인터페이스를 구현으로부터 분리한다.
+        인터페이스를 구현으로부터 분리한다. (클라이언트에서 하나의 인터페이스만 사용하면 된다.)
     2.  객체를 생성하는 코드와 사용하는 코드를 분리해서 관리가 쉽도록 한다.
         새로운 클래스를 추가하려면 if-else구문만 추가하면 된다.
 
@@ -136,7 +136,7 @@ if __name__ == "__main__":
     domain = 'ftp.freebsd.org'
     path = '/pub/FreeBSD'
 
-    protocol = input('Connecting to {}. Which Protocol to use? (0-http, 1-ftp): '.fromat(domain))
+    protocol = input('Connecting to {}. Which Protocol to use? (0-http, 1-ftp): '.format(domain))
 
     if protocol == 0:
         is_secure = bool(input('Use secure connection? (1-Yes, 0-no): '))

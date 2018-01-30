@@ -12,6 +12,7 @@ import abc
 import urllib2
 from BeautifulSoup import BeautifulStoneSoup
 
+
 class AbstractFactory(object):
     """추상 팩토리 인터페이스는 서브클래스에서 세 가지 메소드를 제공한다.
     create_protocol, create_port, create_parser"""
@@ -90,6 +91,7 @@ class FTPPort(Port):
     """ftp 포트를 나타내는 실제 생성물"""
     def __str__(self):
         return '21'
+
 
 class Parser(object):
     """
